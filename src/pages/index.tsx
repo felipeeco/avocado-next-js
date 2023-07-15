@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,14 +33,9 @@ export default function Home() {
         </div>
 
         <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+          <Link href={"/about"}>
+            <h1>Hola soy un link para about</h1>
+          </Link>
         </div>
 
         <div className={styles.grid}>
